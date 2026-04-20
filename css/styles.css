@@ -38,7 +38,7 @@ header {
   background: rgba(17, 18, 20, 0.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
-  padding: 12px 20px;
+  padding: 6px 16px;
   text-align: center;
   position: sticky;
   top: 0;
@@ -53,11 +53,11 @@ header > * {
 }
 
 header img {
-  width: 72px;
-  height: 72px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
   border-radius: 50%;
-  margin: 0 auto 8px;
+  margin: 0 auto 4px;
   display: block;
   border: 2px solid rgba(255, 255, 255, 0.08);
 }
@@ -89,7 +89,7 @@ p {
 
 /* Smaller nav that doesn't eat screen space */
 nav {
-  margin-top: 10px;
+  margin-top: 4px;
 }
 
 nav ul {
@@ -111,7 +111,8 @@ nav ul li a {
   color: var(--text);
   text-decoration: none;
   font-weight: bold;
-  padding: 8px 14px;
+  font-size: 0.9rem;
+  padding: 6px 12px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid transparent;
@@ -293,4 +294,13 @@ footer {
   video {
     max-width: 100%;
   }
+}
+
+.hero-title {
+  margin-bottom: 10px;
+}
+
+.hero-desc {
+  color: #c7c7c7;
+  margin-bottom: 20px;
 }
