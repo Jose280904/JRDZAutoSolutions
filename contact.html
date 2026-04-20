@@ -2,44 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JRDZ Auto Solutions | Contact</title>
+  <meta name="description" content="Get in touch with JRDZ Auto Solutions for automotive installation services.">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="images/jrdz.jpg" alt="JRDZ Auto Solutions logo">
+        <div class="brand-text">
+          <h1>JRDZ Auto Solutions</h1>
+          <p>Clean installs. Reliable work. Mobile available.</p>
+        </div>
+      </a>
 
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="gellery.html">Gallery</a></li>
-    <li><a href="services.html">Services With Pricing</a></li>
-  </ul>
-</nav>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<h1>Contact Us</h1>
+  <main class="section">
+    <div class="container">
+      <span class="badge">Contact</span>
+      <h2 class="section-title">Let’s get your install scheduled</h2>
+      <p class="section-subtitle">
+        Reach out with your vehicle info, requested service, and whether you want mobile service
+        or prefer to come to me.
+      </p>
 
-<p>Have a question or want to book an installation?</p>
+      <div class="grid-2">
+        <section class="card contact-card">
+          <h3>Get in touch</h3>
+          <div class="contact-list">
+            <div class="contact-item">
+              <span>Email</span>
+              <a href="mailto:jrdzautosolutions@gmail.com">jrdzautosolutions@gmail.com</a>
+            </div>
 
-<form>
+            <div class="contact-item">
+              <span>Phone</span>
+              <a href="tel:+17736914282">(773) 691-4282</a>
+            </div>
 
-<label for="name">Name:</label>
-<input type="text" id="name" name="name">
+            <div class="contact-item">
+              <span>Location</span>
+              <p>Please contact me for address details</p>
+            </div>
 
-<br><br>
+            <div class="contact-item">
+              <span>Service Type</span>
+              <p>On-site and mobile installations available</p>
+            </div>
+          </div>
+        </section>
 
-<label for="email">Email:</label>
-<input type="email" id="email" name="email">
+        <section class="card contact-card">
+          <h3>Send a message</h3>
+          <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <label for="name">
+              Name
+              <input type="text" id="name" name="name" required>
+            </label>
 
-<br><br>
+            <label for="email">
+              Email
+              <input type="email" id="email" name="email" required>
+            </label>
 
-<label for="message">Message:</label>
-<textarea id="message" name="message"></textarea>
+            <label for="message">
+              Message
+              <textarea id="message" name="message" placeholder="Tell me your vehicle year, make, model, and what service you need." required></textarea>
+            </label>
 
-<br><br>
+            <button class="btn" type="submit">Send Message</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
 
-<button type="submit">Send</button>
-
-</form>
-
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© 2025 JRDZ Auto Solutions. All rights reserved.</p>
+      <p>Thank you for supporting a local business</p>
+    </div>
+  </footer>
 </body>
 </html>
