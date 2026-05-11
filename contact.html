@@ -14,17 +14,17 @@
         <img src="images/jrdz.jpg" alt="JRDZ Auto Solutions logo">
         <div class="brand-text">
           <h1>JRDZ Auto Solutions</h1>
-          <p>Clean installs. Reliable work. Mobile available.</p>
+          <p>Automotive electronics installed cleanly.</p>
         </div>
       </a>
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a class="active" href="contact.html">Contact</a></li>
-        </ul>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open navigation">☰</button>
+
+      <nav class="dropdown-menu" id="dropdownMenu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a class="active" href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -32,7 +32,7 @@
   <main class="section">
     <div class="container">
       <span class="badge">Contact</span>
-      <h2 class="section-title">Let’s get your install scheduled</h2>
+      <h2 class="section-title">Let’s Get Your Install Scheduled</h2>
       <p class="section-subtitle">
         Reach out with your vehicle info, requested service, and whether you want mobile service
         or prefer to come to me.
@@ -40,7 +40,7 @@
 
       <div class="grid-2">
         <section class="card contact-card">
-          <h3>Get in touch</h3>
+          <h3>Get in Touch</h3>
           <div class="contact-list">
             <div class="contact-item">
               <span>Email</span>
@@ -59,13 +59,13 @@
 
             <div class="contact-item">
               <span>Service Type</span>
-              <p>On-site and mobile installations available</p>
+              <p>In-shop and mobile installations available</p>
             </div>
           </div>
         </section>
 
         <section class="card contact-card">
-          <h3>Send a message</h3>
+          <h3>Send a Message</h3>
           <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
             <label for="name">
               Name
@@ -95,5 +95,11 @@
       <p>Thank you for supporting a local business</p>
     </div>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+  </script>
 </body>
 </html>

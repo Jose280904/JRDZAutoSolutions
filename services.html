@@ -14,17 +14,17 @@
         <img src="images/jrdz.jpg" alt="JRDZ Auto Solutions logo">
         <div class="brand-text">
           <h1>JRDZ Auto Solutions</h1>
-          <p>Clean installs. Reliable work. Mobile available.</p>
+          <p>Automotive electronics installed cleanly.</p>
         </div>
       </a>
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a class="active" href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open navigation">☰</button>
+
+      <nav class="dropdown-menu" id="dropdownMenu">
+        <a href="index.html">Home</a>
+        <a class="active" href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -32,7 +32,7 @@
   <main class="section">
     <div class="container">
       <span class="badge">Services & Pricing</span>
-      <h2 class="section-title">Labor pricing</h2>
+      <h2 class="section-title">Labor Pricing</h2>
       <p class="section-subtitle">
         Prices below are labor only unless otherwise discussed. Mobile pricing may vary based
         on distance and setup.
@@ -40,7 +40,7 @@
 
       <div class="grid-2">
         <section class="card price-card">
-          <h3>If you come to me</h3>
+          <h3>If You Come to Me</h3>
           <table class="price-table">
             <thead>
               <tr>
@@ -52,7 +52,7 @@
               <tr><td>Front Only Dash Cam Installation</td><td class="price">$50</td></tr>
               <tr><td>Front and Rear Dash Cam Installation</td><td class="price">$70</td></tr>
               <tr><td>Mirror Backup Camera</td><td class="price">$120</td></tr>
-              <tr><td>Speaker Upgrades (per pair)</td><td class="price">$60</td></tr>
+              <tr><td>Speaker Upgrades per Pair</td><td class="price">$60</td></tr>
               <tr><td>Backup Camera Installation</td><td class="price">$130</td></tr>
               <tr><td>Radio Installation</td><td class="price">$130</td></tr>
               <tr><td>Radar Detector Hardwire</td><td class="price">$50</td></tr>
@@ -62,7 +62,7 @@
         </section>
 
         <section class="card price-card">
-          <h3>Mobile service</h3>
+          <h3>Mobile Service</h3>
           <table class="price-table">
             <thead>
               <tr>
@@ -74,7 +74,7 @@
               <tr><td>Front Only Dash Cam Installation</td><td class="price">$70</td></tr>
               <tr><td>Front and Rear Dash Cam Installation</td><td class="price">$100</td></tr>
               <tr><td>Mirror Backup Camera</td><td class="price">$140</td></tr>
-              <tr><td>Speaker Upgrades (per pair)</td><td class="price">$80</td></tr>
+              <tr><td>Speaker Upgrades per Pair</td><td class="price">$80</td></tr>
               <tr><td>Backup Camera Installation</td><td class="price">$150</td></tr>
               <tr><td>Radio Installation</td><td class="price">$150</td></tr>
               <tr><td>Radar Detector Hardwire</td><td class="price">$70</td></tr>
@@ -86,7 +86,7 @@
 
       <section class="section">
         <span class="badge">Available Installations</span>
-        <h2 class="section-title">What you can book</h2>
+        <h2 class="section-title">What You Can Book</h2>
         <p class="section-subtitle">
           If you do not see your exact setup listed, you can still reach out for a custom quote.
         </p>
@@ -132,10 +132,10 @@
 
       <div class="card highlight-banner">
         <div>
-          <h2 class="section-title" style="margin-bottom: 10px;">Ready to get a quote?</h2>
+          <h2 class="section-title" style="margin-bottom: 10px;">Ready to Get a Quote?</h2>
           <p>Send your vehicle info, requested service, and whether you already have the parts.</p>
         </div>
-        <a class="btn" href="contact.html">Contact Me</a>
+        <a class="btn" href="contact.html">Get a Quote</a>
       </div>
     </div>
   </main>
@@ -146,5 +146,11 @@
       <p>Labor pricing only • Parts not included unless stated</p>
     </div>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
