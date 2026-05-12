@@ -90,7 +90,7 @@ video {
   color: var(--muted);
 }
 
-/* Visible Navigation */
+/* Navigation */
 .desktop-nav {
   display: flex;
   align-items: center;
@@ -281,19 +281,20 @@ p {
   margin-bottom: 10px;
 }
 
+/* Quote Banner */
 .highlight-banner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 24px;
-
-  max-width: 1100px;
-  width: calc(100% - 40px);
-  margin: 0 auto;
 }
 
 .highlight-banner p {
   max-width: 700px;
+}
+
+.quote-section {
+  padding-top: 10px;
 }
 
 /* Tables */
@@ -448,20 +449,6 @@ tbody tr:nth-child(odd) {
   color: var(--muted);
 }
 
-/* Old page section support */
-#about,
-#services,
-#contact,
-#gallery {
-  max-width: var(--max-width);
-  margin: 24px auto;
-  padding: 28px;
-  background: linear-gradient(180deg, var(--panel-2), var(--panel));
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-}
-
 /* Tablet */
 @media (max-width: 900px) {
   .hero-grid,
@@ -476,11 +463,13 @@ tbody tr:nth-child(odd) {
   .highlight-banner {
     flex-direction: column;
     align-items: flex-start;
+    gap: 18px;
   }
 }
 
 /* Mobile */
 @media (max-width: 700px) {
+
   .nav-wrap {
     flex-direction: column;
     justify-content: center;
@@ -539,11 +528,7 @@ tbody tr:nth-child(odd) {
   }
 
   .card,
-  .hero-panel,
-  #about,
-  #services,
-  #contact,
-  #gallery {
+  .hero-panel {
     padding: 20px;
   }
 
