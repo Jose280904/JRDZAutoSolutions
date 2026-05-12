@@ -34,13 +34,14 @@
       <span class="badge">Contact</span>
       <h2 class="section-title">Let’s Get Your Install Scheduled</h2>
       <p class="section-subtitle">
-        Reach out with your vehicle info, requested service, and whether you want mobile service
+        Send your vehicle info, requested service, and whether you want mobile service
         or prefer to come to me.
       </p>
 
       <div class="grid-2">
         <section class="card contact-card">
           <h3>Get in Touch</h3>
+
           <div class="contact-list">
             <div class="contact-item">
               <span>Email</span>
@@ -54,19 +55,24 @@
 
             <div class="contact-item">
               <span>Location</span>
-              <p>Please contact me for address details</p>
+              <p>Please contact me for address details.</p>
             </div>
 
             <div class="contact-item">
               <span>Service Type</span>
-              <p>In-shop and mobile installations available</p>
+              <p>In-shop and mobile installations available.</p>
             </div>
           </div>
         </section>
 
         <section class="card contact-card">
           <h3>Send a Message</h3>
-          <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+
+          <!-- Replace YOUR_FORM_ID with your real Formspree ID -->
+          <form class="contact-form" action="https://formspree.io/f/xaqvvqwv" method="POST">
+            
+            <input type="hidden" name="_subject" value="New JRDZ Auto Solutions Contact Form Submission">
+
             <label for="name">
               Name
               <input type="text" id="name" name="name" required>
@@ -77,9 +83,43 @@
               <input type="email" id="email" name="email" required>
             </label>
 
+            <label for="phone">
+              Phone Number
+              <input type="tel" id="phone" name="phone" placeholder="(773) 123-4567">
+            </label>
+
+            <label for="vehicle">
+              Vehicle Info
+              <input type="text" id="vehicle" name="vehicle" placeholder="Example: 2015 Jeep Wrangler" required>
+            </label>
+
+            <label for="service">
+              Service Needed
+              <select id="service" name="service" required>
+                <option value="">Choose a service</option>
+                <option value="Remote Start">Remote Start</option>
+                <option value="Dash Cam">Dash Cam</option>
+                <option value="Radio Install">Radio Install</option>
+                <option value="Speakers / Audio">Speakers / Audio</option>
+                <option value="Backup Camera">Backup Camera</option>
+                <option value="Radar Detector">Radar Detector</option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+
+            <label for="service-location">
+              Preferred Service Type
+              <select id="service-location" name="preferred_service_type" required>
+                <option value="">Choose one</option>
+                <option value="In-Shop">In-shop</option>
+                <option value="Mobile Service">Mobile service</option>
+                <option value="Not Sure">Not sure yet</option>
+              </select>
+            </label>
+
             <label for="message">
               Message
-              <textarea id="message" name="message" placeholder="Tell me your vehicle year, make, model, and what service you need." required></textarea>
+              <textarea id="message" name="message" placeholder="Tell me what you need done, what equipment you have, or any questions you have." required></textarea>
             </label>
 
             <button class="btn" type="submit">Send Message</button>
