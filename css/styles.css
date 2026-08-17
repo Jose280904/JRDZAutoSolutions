@@ -27,7 +27,11 @@ html {
 body {
   font-family: Arial, sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(231, 76, 60, 0.12), transparent 24%),
+    radial-gradient(
+      circle at top left,
+      rgba(231, 76, 60, 0.12),
+      transparent 24%
+    ),
     var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -44,45 +48,58 @@ video {
   margin: 0 auto;
 }
 
-/* Header */
+/* =========================
+   HEADER
+========================= */
+
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(17, 18, 20, 0.94);
+  background: rgba(17, 18, 20, 0.96);
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
 
 .nav-wrap {
+  min-height: 88px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 22px;
-  min-height: 78px;
-  flex-wrap: wrap;
+  gap: 30px;
 }
 
+/* Logo */
 .brand {
   display: flex;
   align-items: center;
-  gap: 14px;
-  color: var(--text);
   text-decoration: none;
+  color: var(--text);
+  flex-shrink: 0;
 }
 
 .brand img {
   display: block;
-  width: 190px;
-  height: auto;
+  width: 210px;
+  height: 62px;
   object-fit: contain;
-  flex-shrink: 0;
+  object-position: left center;
+
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
-/* Navigation */
+/* =========================
+   NAVIGATION
+========================= */
+
 .desktop-nav {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 10px;
   flex-wrap: wrap;
 }
@@ -93,7 +110,10 @@ video {
   font-weight: bold;
   padding: 10px 16px;
   border-radius: 999px;
-  transition: 0.25s ease;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .desktop-nav a:hover,
@@ -102,7 +122,14 @@ video {
   color: #fff;
 }
 
-/* Text */
+.desktop-nav a:hover {
+  transform: translateY(-1px);
+}
+
+/* =========================
+   TEXT
+========================= */
+
 h1,
 h2,
 h3 {
@@ -136,7 +163,10 @@ p {
   margin-bottom: 16px;
 }
 
-/* Hero */
+/* =========================
+   HERO
+========================= */
+
 .hero {
   padding: 60px 0 34px;
 }
@@ -225,7 +255,10 @@ p {
   font-size: 0.92rem;
 }
 
-/* Sections */
+/* =========================
+   SECTIONS
+========================= */
+
 .section {
   padding: 30px 0;
 }
@@ -270,7 +303,10 @@ p {
   margin-bottom: 10px;
 }
 
-/* Quote Banner */
+/* =========================
+   QUOTE BANNER
+========================= */
+
 .highlight-banner {
   display: flex;
   justify-content: space-between;
@@ -286,7 +322,10 @@ p {
   padding-top: 10px;
 }
 
-/* Tables */
+/* =========================
+   TABLES
+========================= */
+
 table {
   width: 100%;
   margin-top: 20px;
@@ -321,7 +360,10 @@ tbody tr:nth-child(odd) {
   font-weight: bold;
 }
 
-/* Gallery */
+/* =========================
+   GALLERY
+========================= */
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -354,7 +396,10 @@ tbody tr:nth-child(odd) {
   background: #111;
 }
 
-/* Contact */
+/* =========================
+   CONTACT
+========================= */
+
 .contact-list {
   display: grid;
   gap: 16px;
@@ -419,7 +464,10 @@ tbody tr:nth-child(odd) {
   font-size: 1rem;
 }
 
-/* Footer */
+/* =========================
+   FOOTER
+========================= */
+
 .site-footer {
   margin-top: 30px;
   background-color: #181a1f;
@@ -438,7 +486,10 @@ tbody tr:nth-child(odd) {
   color: var(--muted);
 }
 
-/* Tablet */
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 900px) {
   .hero-grid,
   .grid-2 {
@@ -454,36 +505,57 @@ tbody tr:nth-child(odd) {
     align-items: flex-start;
     gap: 18px;
   }
+
+  .brand img {
+    width: 185px;
+    height: 58px;
+  }
 }
 
-/* Mobile */
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 700px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+  }
 
   .nav-wrap {
+    min-height: auto;
     flex-direction: column;
     justify-content: center;
-    padding: 14px 0;
-    gap: 14px;
+    align-items: center;
+    padding: 12px 0 14px;
+    gap: 10px;
   }
 
   .brand {
+    width: 100%;
     justify-content: center;
   }
 
   .brand img {
-    width: 170px;
-    height: auto;
+    width: 190px;
+    height: 58px;
+    object-fit: contain;
+    object-position: center;
+    border: none;
+    border-radius: 0;
+    background: transparent;
   }
 
   .desktop-nav {
     width: 100%;
     justify-content: center;
-    gap: 8px;
+    gap: 4px;
+    flex-wrap: wrap;
   }
 
   .desktop-nav a {
-    padding: 9px 14px;
-    font-size: 0.95rem;
+    padding: 8px 12px;
+    font-size: 0.92rem;
   }
 
   .hero {
