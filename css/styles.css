@@ -59,7 +59,7 @@ video {
   justify-content: space-between;
   align-items: center;
   gap: 22px;
-  min-height: 82px;
+  min-height: 78px;
   flex-wrap: wrap;
 }
 
@@ -72,22 +72,11 @@ video {
 }
 
 .brand img {
-  width: 58px;
-  height: 58px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.08);
+  display: block;
+  width: 190px;
+  height: auto;
+  object-fit: contain;
   flex-shrink: 0;
-}
-
-.brand-text h1 {
-  font-size: 1.15rem;
-  margin-bottom: 2px;
-}
-
-.brand-text p {
-  font-size: 0.82rem;
-  color: var(--muted);
 }
 
 /* Navigation */
@@ -478,22 +467,12 @@ tbody tr:nth-child(odd) {
   }
 
   .brand {
-    flex-direction: column;
-    text-align: center;
-    gap: 8px;
+    justify-content: center;
   }
 
   .brand img {
-    width: 54px;
-    height: 54px;
-  }
-
-  .brand-text h1 {
-    font-size: 1rem;
-  }
-
-  .brand-text p {
-    display: none;
+    width: 170px;
+    height: auto;
   }
 
   .desktop-nav {
